@@ -1,6 +1,9 @@
-
 const reverse = array => {
-  return array.map((value, index) => array[array.length - 1 - index]);
+  const newArray = [];
+  for(let i = 0; i < array.length; i++) {
+    newArray[i] = array[array.length - 1 - i];
+  }
+  return newArray;
 };
 
 module.exports = reverse;
