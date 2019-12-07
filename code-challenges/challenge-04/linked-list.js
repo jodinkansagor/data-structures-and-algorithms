@@ -5,13 +5,20 @@ class Node {
   }
 }
 
-class List {
-  constructor(head) {
-    this.head = head;
+class LinkedList {
+  constructor(value) {
+    this.head = null;
+    this.length = 0;
+    this.insert(value);
   }
 
   insert(value) {
     //adds new node with that value at the head
+    const newNode = { value };
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    return this;
   }
 
   includes(value) {
@@ -25,4 +32,4 @@ class List {
 }
 
 
-module.exports = { Node, List}
+module.exports = { Node, LinkedList}
