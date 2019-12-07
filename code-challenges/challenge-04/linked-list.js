@@ -24,8 +24,8 @@ class LinkedList {
   includes(value) {
     let thisNode = this.head;
 
-    while (thisNode) {
-      if (thisNode.value === value) {
+    while(thisNode) {
+      if(thisNode.value === value) {
         return true;
       } else return false;
     }
@@ -34,10 +34,9 @@ class LinkedList {
   toString() {
     let thisNode = this.head;
     let arrayToString = [];
-    while (thisNode) {
+    while(thisNode) {
       arrayToString.push(thisNode.value);
-      thisNode++;
-      return arrayToString;
+      thisNode = thisNode.next;
     }
     let stringList = arrayToString.toString();
     return stringList;

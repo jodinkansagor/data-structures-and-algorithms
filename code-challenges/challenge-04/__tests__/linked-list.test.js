@@ -55,12 +55,12 @@ describe('linked list tests', () => {
     expect(hasValue).toBeFalsy;
   });
 
-  // it('can properly return a collection of all the values in a string', () => {
-  //   const newList = new LinkedList();
-  //   const insertOne = newList.insert(4);
-  //   const insertTwo = insertOne.insert(10);
-  //   const string = insertTwo.toString();
-  //   expect(string).toEqual(410);
+  it('can properly return a collection of all the values in a string', () => {
+    const newList = new LinkedList();
+    const insertOne = newList.insert(4);
+    const insertTwo = insertOne.insert(10);
+    const string = insertTwo.toString();
+    expect(string).toEqual('10,4,');
 
-  // });
+  });
 });
