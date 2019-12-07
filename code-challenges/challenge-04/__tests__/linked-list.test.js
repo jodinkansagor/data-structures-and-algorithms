@@ -6,9 +6,11 @@ describe('linked list tests', () => {
     expect(newList).toBeNull;
   });
 
-  // it('inserts into the list', () => {
-
-  // });
+  it('inserts into the list', () => {
+    const newList = new LinkedList;
+    const insertOne = newList.insert(5);
+    expect(insertOne).toEqual({ 'head': { 'next': { 'next': null, 'value': undefined }, 'value': 5 }, 'length': 2 });
+  });
 
   // it('the head property points to the first node', () => {
 
@@ -30,3 +32,4 @@ describe('linked list tests', () => {
 
   // });
 })
+;
