@@ -1,7 +1,7 @@
 class Node {
-  constructor(value, next){
+  constructor(value, next) {
     this.value = value;
-    this.next = next;
+    this.next = next || null;
   }
 }
 
@@ -14,7 +14,7 @@ class LinkedList {
 
   insert(value) {
     //adds new node with that value at the head
-    const newNode = { value };
+    const newNode = new Node(value, this.head);
     newNode.next = this.head;
     this.head = newNode;
     this.length++;
@@ -24,18 +24,26 @@ class LinkedList {
   includes(value) {
     let thisNode = this.head;
 
-    while(thisNode) {
-      if(thisNode.value === value) {
+    while (thisNode) {
+      if (thisNode.value === value) {
         return true;
       } else return false;
     }
   }
 
   toString() {
-    // makes a string of all the values in the list
+    let thisNode = this.head;
+    let arrayToString = [];
+    while (thisNode) {
+      arrayToString.push(thisNode.value);
+      thisNode++;
+      return arrayToString;
+    }
+    let stringList = arrayToString.toString();
+    return stringList;
   }
 
 }
 
 
-module.exports = { Node, LinkedList }
+module.exports = { Node, LinkedList };

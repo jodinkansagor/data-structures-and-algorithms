@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575749623933" clover="3.2.0">
-  <project timestamp="1575749623933" name="All files">
-    <metrics statements="40" coveredstatements="20" conditionals="6" coveredconditionals="2" methods="8" coveredmethods="3" elements="54" coveredelements="25" complexity="0" loc="40" ncloc="40" packages="4" files="4" classes="4"/>
+<coverage generated="1575750747583" clover="3.2.0">
+  <project timestamp="1575750747583" name="All files">
+    <metrics statements="48" coveredstatements="22" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="4" elements="64" coveredelements="30" complexity="0" loc="48" ncloc="48" packages="4" files="4" classes="4"/>
     <package name="challenge-01">
       <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="array-reverse.js" path="C:\Users\jodin\alchemy\career-track\data-structures-and-algorithms\code-challenges\challenge-01\array-reverse.js">
@@ -45,11 +45,11 @@
       </file>
     </package>
     <package name="challenge-04">
-      <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="3"/>
+      <metrics statements="24" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="4"/>
       <file name="linked-list.js" path="C:\Users\jodin\alchemy\career-track\data-structures-and-algorithms\code-challenges\challenge-04\linked-list.js">
-        <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="3"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="24" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="4"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="5" type="stmt"/>
         <line num="11" count="5" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
@@ -63,7 +63,15 @@
         <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
       </file>
     </package>
   </project>
