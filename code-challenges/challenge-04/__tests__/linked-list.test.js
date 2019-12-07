@@ -37,9 +37,9 @@ describe('linked list tests', () => {
 
   });
 
-  // it('has a method that returns true if the value is found', () => {
+  it('has a method that returns true if the value is found', () => {
 
-  // });
+  });
 
   // it('has a method that returns false when looking for a value that is not in the list', () => {
 

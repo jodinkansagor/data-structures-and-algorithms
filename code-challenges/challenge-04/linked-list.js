@@ -22,7 +22,13 @@ class LinkedList {
   }
 
   includes(value) {
-    // returns boolean if the value is in the list
+    let thisNode = this.head;
+
+    while(thisNode) {
+      if(thisNode.value === value) {
+        return true;
+      } else return false;
+    }
   }
 
   toString() {
