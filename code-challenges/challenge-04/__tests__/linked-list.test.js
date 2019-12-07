@@ -1,12 +1,12 @@
 const { LinkedList, Node } = require('../linked-list');
 
 describe('linked list tests', () => {
-  it.skip('instantiates a new list', () => {
+  it('instantiates a new list', () => {
     const newList = new LinkedList;
     expect(newList).toBeNull;
   });
 
-  it.skip('inserts into the list', () => {
+  it('inserts into the list', () => {
     const newList = new LinkedList;
     const insertOne = newList.insert(5);
     expect(insertOne).toEqual({ 'head': { 'next': { 'next': null, 'value': undefined }, 'value': 5 }, 'length': 2 });
@@ -37,13 +37,24 @@ describe('linked list tests', () => {
 
   });
 
-  it('has a method that returns true if the value is found', () => {
+  it('has a method that returns true when looking for a value that is not in the list', () => {
+    const newList = new LinkedList();
+    const insertOne = newList.insert(4);
+    const insertTwo = insertOne.insert(10);
+    const hasValue = insertTwo.includes(10);
+    expect(hasValue).toBeTruthy;
 
   });
 
-  // it('has a method that returns false when looking for a value that is not in the list', () => {
+  it('has a method that returns false if the value is found', () => {
+    const newList = new LinkedList();
+    const insertOne = newList.insert(4);
+    const insertTwo = insertOne.insert(10);
+    const hasValue = insertTwo.includes(12);
+    expect(hasValue).toBeFalsy;
+  });
 
-  // });
+
 
   // it('can properly return a collection of all the values in a string', () => {
 
