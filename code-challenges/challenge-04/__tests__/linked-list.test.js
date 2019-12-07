@@ -13,9 +13,12 @@ describe('linked list tests', () => {
     expect(insertOne).toEqual({ 'head': { 'next': { 'next': null, 'value': undefined }, 'value': 5 }, 'length': 2 });
   });
 
-  // it('the head property points to the first node', () => {
-
-  // });
+  it('the head property points to the first node', () => {
+    const newList = new LinkedList;
+    const insertOne = newList.insert(5);
+    const insertTwo = insertOne.insert(10);
+    expect(insertTwo.head.value).toEqual(10);
+  });
 
   it('can properly insert multiple nodes into the list', () => {
     const newList = new LinkedList();
