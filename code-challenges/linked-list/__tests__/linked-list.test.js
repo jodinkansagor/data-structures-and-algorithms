@@ -64,6 +64,24 @@ describe('linked list tests', () => {
     const insertTwo = insertOne.insert(10);
     const string = insertTwo.toString();
     expect(string).toEqual('10,4,');
+  });
 
+  it('can add a new node to the end of the list', () => {
+    const newList = new LinkedList();
+    const insertOne = newList.insert(15);
+    const appendNew = insertOne.append(17);
+    expect(appendNew).toEqual({
+      'head': {
+        'next': {
+          'next': {
+            'next': null,
+            'value': undefined,
+          },
+          'value': 17,
+        },
+        'value': 15,
+      },
+      'length': 2,
+    });
   });
 });

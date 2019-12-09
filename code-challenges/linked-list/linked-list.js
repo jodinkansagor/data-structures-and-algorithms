@@ -13,7 +13,6 @@ class LinkedList {
   }
 
   insert(value) {
-    //adds new node with that value at the head
     const newNode = new Node(value, this.head);
     newNode.next = this.head;
     this.head = newNode;
@@ -41,6 +40,19 @@ class LinkedList {
     let stringList = arrayToString.toString();
     return stringList;
   }
+
+  append(value) {
+    const newNode = new Node(value, null);
+    let thisNode = this.head;
+     
+    while(thisNode) {
+      if(thisNode.next === null) {
+        thisNode = newNode.value;
+      }
+      return newNode;
+    }
+  }
+
 
 }
 
