@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575866748420" clover="3.2.0">
-  <project timestamp="1575866748420" name="All files">
+<coverage generated="1575919150136" clover="3.2.0">
+  <project timestamp="1575919150136" name="All files">
     <metrics statements="53" coveredstatements="34" conditionals="10" coveredconditionals="5" methods="9" coveredmethods="6" elements="72" coveredelements="45" complexity="0" loc="53" ncloc="53" packages="4" files="4" classes="4"/>
     <package name="array-reverse">
       <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>

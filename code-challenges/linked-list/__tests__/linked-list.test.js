@@ -8,36 +8,22 @@ describe('linked list tests', () => {
   });
 
   it('inserts into the list', () => {
-    const newList = new LinkedList;
-    const insertOne = newList.insert(5);
-    expect(insertOne).toEqual({ 'head': { 'next': { 'next': null, 'value': undefined }, 'value': 5 }, 'length': 2 });
+    const newList = new LinkedList(15);
+    newList.insert(5);
+    expect(newList.toString()).toEqual('5 -> 15');
   });
 
   it('the head property points to the first node', () => {
-    const newList = new LinkedList;
-    const insertOne = newList.insert(5);
-    const insertTwo = insertOne.insert(10);
-    expect(insertTwo.head.value).toEqual(10);
+    const newList = new LinkedList(5);
+    newList.insert(10);
+    expect(newList.head.value).toEqual(10);
   });
 
   it('can properly insert multiple nodes into the list', () => {
-    const newList = new LinkedList();
-    const insertOne = newList.insert(4);
-    const insertTwo = insertOne.insert(10);
-    expect(insertTwo).toEqual({
-      'head': {
-        'next': {
-          'next': {
-            'next': null,
-            'value': undefined,
-          },
-          'value': 4,
-        },
-        'value': 10,
-      },
-      'length': 3,
-
-    });
+    const newList = new LinkedList(4);
+    newList.insert(10);
+    newList.insert(15);
+    expect(newList.toString()).toEqual('15 -> 10 -> 4');
 
   });
 
@@ -59,29 +45,33 @@ describe('linked list tests', () => {
   });
 
   it('can properly return a collection of all the values in a string', () => {
-    const newList = new LinkedList();
-    const insertOne = newList.insert(4);
-    const insertTwo = insertOne.insert(10);
-    const string = insertTwo.toString();
-    expect(string).toEqual('10,4,');
+    const newList = new LinkedList(5);
+    newList.insert(4);
+    newList.insert(10);
+    const string = newList.toString();
+    expect(string).toEqual('10 -> 4 -> 5');
   });
 
   it('can add a new node to the end of the list', () => {
-    const newList = new LinkedList();
-    const insertOne = newList.insert(15);
-    const appendNew = insertOne.append(17);
-    expect(appendNew).toEqual({
-      'head': {
-        'next': {
-          'next': {
-            'next': null,
-            'value': undefined,
-          },
-          'value': 17,
-        },
-        'value': 15,
-      },
-      'length': 2,
-    });
+    const newList = new LinkedList(13);
+    newList.append(17);
+
+    expect(newList.toString()).toEqual('13 -> 17');
+  });
+
+  it('can add a value in the middle of a list before a specific value', () => {
+    const newList = new LinkedList(24);
+    newList.insert(5);
+    newList.insertBefore(24, 15);
+    expect(newList.toString()).toEqual('5 -> 15 -> 24');
+  });
+
+  it('can insert a value after a specific value in your list', () => {
+    const newList = new LinkedList(17);
+    newList.insert(10);
+    newList.insert(18);
+    newList.insert(22);
+    newList.insertAfter(10, 15);
+    expect(newList.toString()).toEqual('22 -> 18 -> 10 -> 15 -> 17');
   });
 });

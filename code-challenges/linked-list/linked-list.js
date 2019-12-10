@@ -23,8 +23,8 @@ class LinkedList {
   includes(value) {
     let thisNode = this.head;
 
-    while(thisNode) {
-      if(thisNode.value === value) {
+    while (thisNode) {
+      if (thisNode.value === value) {
         return true;
       } else return false;
     }
@@ -33,28 +33,52 @@ class LinkedList {
   toString() {
     let thisNode = this.head;
     let arrayToString = [];
-    while(thisNode) {
+    while (thisNode) {
       arrayToString.push(thisNode.value);
       thisNode = thisNode.next;
     }
-    let stringList = arrayToString.toString();
+    let joinList = arrayToString.join(' -> ');
+    let stringList = joinList.toString();
     return stringList;
   }
 
   append(value) {
     const newNode = new Node(value, null);
-    let thisNode = this.head;
-     
-    while(thisNode) {
-      if(thisNode.next === null) {
-        thisNode = newNode.value;
-      }
-      return newNode;
+    let currentNode = this.head;
+
+    while (currentNode.next !== null) {
+      currentNode = currentNode.next;
     }
+    currentNode.next = newNode;
   }
 
+  insertBefore(value, newValue) {
+    const newNode = new Node(newValue);
+    let currentNode = this.head;
+    console.log(currentNode.next);
+
+    while (currentNode.next !== value) {
+      currentNode = currentNode.next;
+    }
+    newNode.next = currentNode.next;
+    currentNode.next = newNode;
+
+
+  }
+
+  insertAfter(value, newValue) {
+    const newNode = new Node(newValue);
+    let currentNode = this.head;
+    console.log(currentNode.next);
+
+    while (currentNode.next !== value && currentNode.next !== null) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = newNode;
+  }
 
 }
+
 
 
 module.exports = { Node, LinkedList };
