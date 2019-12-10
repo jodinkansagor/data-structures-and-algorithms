@@ -41,15 +41,3 @@ To create the insert method, I instatiated a new node, set the new node equal to
 Includes simply checks to see if a value is there and returns true if it is and false if it isnt using a while loop.
 
 For toString, I first converted the list to an array and then used the built in toString method on that array. To convert the list to an array, I again used the while loop and pushed each value into a new array.
-
-# Linked List Insertions
-
-## Challenge
-Add methods to the class that 1. append a node to the end of the list, 2. insert before a node and 3. insert after a node.
-
-## Approach
-See white board images in assets
-
-## Solution
-See white board images in assets
-
