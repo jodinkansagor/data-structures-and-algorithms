@@ -81,6 +81,6 @@ describe('linked list tests', () => {
     newList.insert(18);
     newList.insert(22);
     newList.insertAfter(18, 890);
-    expect(newList.toString()).toEqual('22 -> 890 -> 18 -> 10 -> 17');
+    expect(newList.toString()).toEqual('22 -> 18 -> 890 -> 10 -> 17');
   });
 });

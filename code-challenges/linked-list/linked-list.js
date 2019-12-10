@@ -73,22 +73,15 @@ class LinkedList {
     const newNode = new Node(newValue);
     let currentNode = this.head;
 
-    console.log(currentNode, newNode, 'CURRENT NEW')
-    console.log(value);
-    while (currentNode.next !== null && currentNode.next !== value) {
+    while (currentNode.next !== value) {
       currentNode = currentNode.next;
       break;
     }
-    if (currentNode.next === value) {
-      console.log(newNode, 'newNODE');
-      console.log(currentNode, 'CURRENT NODe');
-      currentNode.next = newNode;
-      newNode.next = currentNode.next;
-      console.log(newNode, 'NEWNODE AFTER');
-      console.log(currentNode, 'CURRENT NODE AFTER')
-    }
+    newNode.next = currentNode.next;
+    currentNode.next = newNode;
   }
 }
+
 
 
 
