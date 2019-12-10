@@ -62,16 +62,25 @@ describe('linked list tests', () => {
   it('can add a value in the middle of a list before a specific value', () => {
     const newList = new LinkedList(24);
     newList.insert(5);
+    newList.insert(18);
     newList.insertBefore(24, 15);
-    expect(newList.toString()).toEqual('5 -> 15 -> 24');
+    expect(newList.toString()).toEqual('18 -> 5 -> 15 -> 24');
   });
 
-  it('can insert a value after a specific value in your list', () => {
-    const newList = new LinkedList(17);
-    newList.insert(10);
-    newList.insert(18);
-    newList.insert(22);
-    newList.insertAfter(10, 15);
-    expect(newList.toString()).toEqual('22 -> 18 -> 10 -> 15 -> 17');
+  it('can add a value at the beginning of a list before a specific value', () => {
+    const newList2 = new LinkedList(72);
+    newList2.insert(53);
+    newList2.insert(36);
+    newList2.insertBefore(36, 'hi');
+    expect(newList2.toString()).toEqual('hi -> 36 -> 53 -> 72');
   });
+
+  // it('can insert a value after a specific value in your list', () => {
+  //   const newList = new LinkedList(17);
+  //   newList.insert(10);
+  //   newList.insert(18);
+  //   newList.insert(22);
+  //   newList.insertAfter(10, 15);
+  //   expect(newList.toString()).toEqual('22 -> 18 -> 10 -> 15 -> 17');
+  // });
 });
