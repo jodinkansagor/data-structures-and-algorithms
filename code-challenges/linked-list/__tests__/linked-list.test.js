@@ -75,12 +75,12 @@ describe('linked list tests', () => {
     expect(newList2.toString()).toEqual('hi -> 36 -> 53 -> 72');
   });
 
-  // it('can insert a value after a specific value in your list', () => {
-  //   const newList = new LinkedList(17);
-  //   newList.insert(10);
-  //   newList.insert(18);
-  //   newList.insert(22);
-  //   newList.insertAfter(10, 15);
-  //   expect(newList.toString()).toEqual('22 -> 18 -> 10 -> 15 -> 17');
-  // });
+  it('can insert a value after a specific value in your list', () => {
+    const newList = new LinkedList(17);
+    newList.insert(10);
+    newList.insert(18);
+    newList.insert(22);
+    newList.insertAfter(18, 890);
+    expect(newList.toString()).toEqual('22 -> 890 -> 18 -> 10 -> 17');
+  });
 });

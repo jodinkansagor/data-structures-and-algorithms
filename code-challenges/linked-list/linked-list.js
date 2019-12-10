@@ -55,8 +55,6 @@ class LinkedList {
   insertBefore(value, newValue) {
     const newNode = new Node(newValue);
     let currentNode = this.head;
-    console.log(this.head, 'THIS DOT HEAD');
-    console.log(value, 'VALUE!!!');
 
     if (this.head.value === value) {
       this.head = newNode;
@@ -71,16 +69,25 @@ class LinkedList {
     }
   }
 
-  // insertAfter(value, newValue) {
-  //   const newNode = new Node(newValue);
-  //   let currentNode = this.head;
+  insertAfter(value, newValue) {
+    const newNode = new Node(newValue);
+    let currentNode = this.head;
 
-  //   while (currentNode.next !== value && currentNode.next !== null) {
-  //     currentNode = currentNode.next;
-  //   }
-  //   currentNode.next = newNode;
-  // }
-
+    console.log(currentNode, newNode, 'CURRENT NEW')
+    console.log(value);
+    while (currentNode.next !== null && currentNode.next !== value) {
+      currentNode = currentNode.next;
+      break;
+    }
+    if (currentNode.next === value) {
+      console.log(newNode, 'newNODE');
+      console.log(currentNode, 'CURRENT NODe');
+      currentNode.next = newNode;
+      newNode.next = currentNode.next;
+      console.log(newNode, 'NEWNODE AFTER');
+      console.log(currentNode, 'CURRENT NODE AFTER')
+    }
+  }
 }
 
 
