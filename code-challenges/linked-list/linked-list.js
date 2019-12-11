@@ -83,19 +83,22 @@ class LinkedList {
 
   kthFromEnd(k) {
     let currentNode = this.head;
-
     let nodeLookingFor = this.length - k;
-    console.log(this.length, 'THIS DOT LEGNTH');
-    console.log(nodeLookingFor, 'NODE LOOKING FOR');
-    for (let i = 1; i !== nodeLookingFor; i++) {
-      console.log(currentNode.value, 'CUTTENT NODE DOT VALUE')
-      currentNode = currentNode.next;
+    // let err = new Error('This value did not work');
+
+    if (k > this.length || k < 0) {
+      return 'This value doesnt work dummy';
+    } else if (k === this.length) {
+      return this.head.value;
+    } else {
+
+      for (let i = 1; i !== nodeLookingFor; i++) {
+        currentNode = currentNode.next;
+      }
+      return currentNode.value;
     }
-    return currentNode.value;
   }
-
 }
-
 
 
 

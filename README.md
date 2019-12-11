@@ -56,9 +56,9 @@ For toString, I first converted the list to an array and then used the built in 
 Write a method that takes a number as an input. The output is the node's value that is k from the end of the list
 
 ### Tests
-1. k is greater than the length of the linked list
+1. k is greater than the length of the linked list (error)
 2. k and the length are the same
-3. k is not a positive number
+3. k is not a positive number (error)
 4. linked list the size of 1
 5. ks is not at the end but somewhere in the middle
 

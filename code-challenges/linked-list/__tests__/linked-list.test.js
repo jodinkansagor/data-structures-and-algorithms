@@ -84,7 +84,7 @@ describe('linked list tests', () => {
     expect(newList.toString()).toEqual('22 -> 18 -> 890 -> 10 -> 17');
   });
 
-  it('can tell you what value is at a specific node spot', () => {
+  it('can tell you what value is at a specific node spot when k is somewhere in the middle', () => {
     const newList = new LinkedList(17);
     newList.insert(10);
     newList.insert(18);
@@ -92,5 +92,24 @@ describe('linked list tests', () => {
     newList.kthFromEnd(2);
     expect(newList.kthFromEnd(2)).toEqual(18);
   });
+
+  it('will throw an error when k is greater than the length of the list', () => {
+    const newList = new LinkedList(17);
+    newList.insert(10);
+    newList.insert(18);
+    newList.insert(22);
+    newList.kthFromEnd(10);
+    expect(newList.kthFromEnd(10)).toEqual('This value doesnt work dummy');
+  });
+
+  it('will tell you the head of the tail when k and the length are the same', () => {
+    const newList = new LinkedList(17);
+    newList.insert(10);
+    newList.insert(18);
+    newList.insert(22);
+    newList.kthFromEnd(4);
+    expect(newList.kthFromEnd(4)).toEqual(22);
+  });
+
 
 });
