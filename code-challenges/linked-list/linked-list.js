@@ -84,7 +84,7 @@ class LinkedList {
   kthFromEnd(k) {
     let currentNode = this.head;
     let nodeLookingFor = this.length - k;
-    // let err = new Error('This value did not work');
+
 
     if (k > this.length || k < 0) {
       return 'This value doesnt work dummy';
@@ -96,6 +96,12 @@ class LinkedList {
         currentNode = currentNode.next;
       }
       return currentNode.value;
+    }
+  }
+
+  mergeLists(list1, list2) {
+    while (list1 && list2) {
+      
     }
   }
 }
