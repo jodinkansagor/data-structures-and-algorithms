@@ -100,8 +100,14 @@ class LinkedList {
   }
 }
 
-mergeLists(list1, list2) {
+const mergeLists = (list1, list2) => {
+  let list1Head = list1.head;
+  let list2Head = list2.head;
+  console.log(list1Head, list2Head, 'LIST HEADS');
 
+  list1Head.next = list2Head;
+  list2Head.next = 
+  console.log(list1Head.next, 'new list one head next');
 };
 
 
