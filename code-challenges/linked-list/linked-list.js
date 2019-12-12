@@ -98,14 +98,12 @@ class LinkedList {
       return currentNode.value;
     }
   }
-
-  mergeLists(list1, list2) {
-    while (list1 && list2) {
-      
-    }
-  }
 }
 
+mergeLists(list1, list2) {
+
+};
 
 
-module.exports = { Node, LinkedList };
+
+module.exports = { Node, LinkedList, mergeLists };

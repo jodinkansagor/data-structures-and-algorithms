@@ -1,4 +1,4 @@
-const { LinkedList } = require('../linked-list');
+const { LinkedList, mergeLists } = require('../linked-list');
 
 describe('linked list tests', () => {
 
@@ -111,5 +111,15 @@ describe('linked list tests', () => {
     expect(newList.kthFromEnd(4)).toEqual(22);
   });
 
+  it('can merge two linked lists like a zipper', () => {
+    const newList1 = new LinkedList(2);
+    newList1.insert(3);
+    newList1.insert(1);
+    const newList2 = new LinkedList(4);
+    newList2.insert(9);
+    newList2.insert(5);
+    const mergedList = mergeLists(newList1, newList2);
+    expect(mergedList).toEqual('1 -> 5 -> 3 -> 9 -> 2 -> 4);
+  })
 
 });
