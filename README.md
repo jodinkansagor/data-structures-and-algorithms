@@ -67,3 +67,6 @@ I think you can use this.length to figure out how long the list is and then find
 
 
 ## Solution
+
+# Pseudoqueue
+Make a queue out of stacks.

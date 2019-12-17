@@ -1,44 +1,11 @@
-class Node {
-  constructor(value, next = null) {
-    this.value = value;
-    this.next = next;
-  }
-}
+const PseudoQueue = require('./queue-with-stacks');
 
-class Stack {
-  constructor() {
-    this.top = null;
-  }
-
-  push(value) {
-    const node = new Node(value, this.top);
-    this.top = node;
-  }
-
-  pop() {
-    if (!this.top) return null;
-
-    const top = this.top;
-    this.top = top.next;
-    return top;
-  }
-
-  peek() {
-    if (!this.top) return null;
-    return this.top.value;
-  }
-
-  isEmpty() {
-    return !this.top;
-  }
-}
-
-class PseudoQueue {
-  constructor() {
-    this.stack
-  }
-
-  enqueue(value)
-
-
-}
+describe('pseudoqueue', () => {
+  it('can add a new node to the pseudoqueue', () => {
+    const pseudoqueue = new PseudoQueue;
+    pseudoqueue.enqueue(20);
+    pseudoqueue.enqueue(15);
+    pseudoqueue.enqueue(10);
+    expect(pseudoqueue.toString()).toEqual('5 -> 10 -> 15 -> 20');
+  });
+});
