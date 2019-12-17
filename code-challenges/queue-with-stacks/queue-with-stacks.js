@@ -36,17 +36,16 @@ class Stack {
 class PseudoQueue {
   constructor() {
     this.stackOne = new Stack(),
-      this.stackTwo = new Stack();
+    this.stackTwo = new Stack();
   }
 
   enqueue(value) {
     while (!this.stackOne.isEmpty()) {
       const top = this.stackOne.pop(this.stackOne.top);
-      this.stackTwo.push(top);
+      this.stackTwo.push(top.value);
     }
 
-    const node = new Node(value, null);
-    this.stackTwo.push(node);
+    this.stackTwo.push(value);
 
     while (!this.stackTwo.isEmpty()) {
       const top = this.stackTwo.pop(this.stackTwo.top);
@@ -61,6 +60,8 @@ class PseudoQueue {
   }
 
   toString() {
+    const string = '',
+    while
     return this.stackOne.value.toString();
   }
 }
