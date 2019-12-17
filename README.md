@@ -78,3 +78,5 @@ Write a method called mergeLists that takes 2 linked lists as input. The functio
 I imagine that the function needs to be able to start at the head of the first list, reset the next to the head of the second list, then set the next of that to what was previously the next of the head of list 1 and then set the next of that to what was the next of the head of list 2. And so on.
 
 Scrap that. What if you took list number 1 and defined the head. Then took list number two and took the head and used the insertAfter function to insert it into the first list after the head. Then the second node in that list would become the head. You could then use insertAfter on that one to tell it to insert after the one that is now the next on the second one from the head. And so on?
+
+
