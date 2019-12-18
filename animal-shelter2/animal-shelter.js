@@ -66,15 +66,15 @@ class AnimalShelter {
     else return;
   }
 
-  dequeue(pref) {
-    if (this.isEmpty()) return null;
-
-    const front = this.front;
-    this.front = this.front.next;
-    if (this.isEmpty()) this.back = null;
-
-    return front;
+  animalDequeue(pref) {
+    if (pref === 'cat') {
+      this.catQueue.dequeue();
+    } else if (pref === 'dog') {
+      this.dogQueue.dequeue();
+    }
+    else return null;
   }
+
 
   toString() {
     let currentNode = this.front;
