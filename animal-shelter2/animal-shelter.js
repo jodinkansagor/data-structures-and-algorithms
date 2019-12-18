@@ -53,8 +53,8 @@ class Queue {
 
 class AnimalShelter {
   constructor() {
-    this.dogQueue = new Queue;
-    this.catQueue = new Queue;
+    this.dogQueue = new Queue();
+    this.catQueue = new Queue();
   }
 
   enqueue(animal) {
