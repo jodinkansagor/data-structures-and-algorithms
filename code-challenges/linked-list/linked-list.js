@@ -104,17 +104,18 @@ const mergeLists = (list1, list2) => {
   let list1Head = list1.head;
   let list2Head = list2.head;
 
-  while(list1Head && list2Head) {
-    let nodeOneNext = list1Head.next;
-    let nodeTwoNext = list2Head.next;
 
-    if (nodeOneNext.next) nodeTwoNext.next = nodeOneNext.next;
-    list2Head.next = list2Head;
+  while (list1Head && list2Head) {
+    let list1HeadNext = list1Head.next;
+    let list2HeadNext = list2Head.next;
 
-    list1Head = nodeOneNext;
-    list2Head = nodeTwoNext;
+    if (list1Head.next) list2Head.next = list1Head.next;
+    list1Head.next = list2Head;
+
+    list1Head = list1HeadNext;
+    list2Head = list2HeadNext;
   }
-  
+  return list1;
 };
 
 

@@ -119,7 +119,7 @@ describe('linked list tests', () => {
     newList2.insert(9);
     newList2.insert(5);
     const mergedList = mergeLists(newList1, newList2);
-    expect(mergedList).toEqual('1 -> 5 -> 3 -> 9 -> 2 -> 4');
+    expect(mergedList.toString()).toEqual('1 -> 5 -> 3 -> 9 -> 2 -> 4');
   });
 
 });
