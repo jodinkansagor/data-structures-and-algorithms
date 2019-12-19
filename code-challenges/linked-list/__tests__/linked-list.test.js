@@ -111,5 +111,4 @@ describe('linked list tests', () => {
     expect(newList.kthFromEnd(4)).toEqual(22);
   });
 
-
 });
