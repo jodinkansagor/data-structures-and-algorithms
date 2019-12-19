@@ -67,3 +67,12 @@ I think you can use this.length to figure out how long the list is and then find
 
 
 ## Solution
+
+# Bracket Validator
+
+Challenge - create a function that validates matching brackets. The function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets: {}, (), [].
+
+## Approach
+Seed the stack with a dummy node. Check if the next item in the string is the buddy to what is on the top of the stack. If it is, pop that item from the stack. If it is not, push that to the top of the stack and repeat.
+
+At the end, if there is only the dummy node on the stack, return true. If anything else is there, return false.
