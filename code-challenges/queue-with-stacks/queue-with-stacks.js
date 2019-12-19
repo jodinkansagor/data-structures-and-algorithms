@@ -49,6 +49,7 @@ class PseudoQueue {
 
     while (!this.stackTwo.isEmpty()) {
       const top = this.stackTwo.pop(this.stackTwo.top);
+
       this.stackOne.push(top.value);
     }
     return this.stackOne;
@@ -67,6 +68,7 @@ class PseudoQueue {
       currentNode = currentNode.next;
     }
     return string;
+
   }
 }
 
