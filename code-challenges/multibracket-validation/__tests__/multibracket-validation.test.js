@@ -1,31 +1,17 @@
 const { bracketValidation } = require('../multibracket-validation');
 
-describe('bracket validator', () => {
-  it('validates matching brackets', () => {
-    expect(bracketValidation('()')).toBeTruthy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('{{()}}')).toBeTruthy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('(){}')).toBeTruthy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('{()}{}')).toBeTruthy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('()[[Extra Characters]]')).toBeTruthy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('{[}]')).toBeFalsy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('{')).toBeFalsy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation(')')).toBeFalsy;
-  });
-  it('validates matching brackets', () => {
-    expect(bracketValidation('[}')).toBeFalsy;
+describe('validator', () => {
+  it('works', () => {
+    expect(bracketValidation('{}')).toEqual(true);
+    expect(bracketValidation('{}(){}')).toEqual(true);
+    expect(bracketValidation('()[[Extra Characters]]')).toEqual(true);
+    expect(bracketValidation('(){}[[]]')).toEqual(true);
+    expect(bracketValidation('{}{Code}[Fellows](())')).toEqual(true);
+    expect(bracketValidation('[({}]')).toEqual(false);
+    expect(bracketValidation('(](')).toEqual(false);
+    expect(bracketValidation('{(})')).toEqual(false);
+    expect(bracketValidation('{')).toEqual(false);
+    expect(bracketValidation(')')).toEqual(false);
+    expect(bracketValidation('[}')).toEqual(false);
   });
 });

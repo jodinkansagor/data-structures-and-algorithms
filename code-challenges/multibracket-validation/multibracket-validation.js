@@ -47,11 +47,11 @@ const bracketValidation = (input) => {
       if (matches[i] === stack.top.value) {
         stack.pop();
       } else {
-        stack.push[i];
+        stack.push(i);
       }
-      return (stack.top.value === 'anchor') ? true : false;
     }
   }
+  return (stack.top.value === 'anchor') ? true : false;
 };
 
 
@@ -61,4 +61,3 @@ module.exports = {
   Stack,
   bracketValidation
 };
-
