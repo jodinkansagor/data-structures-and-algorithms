@@ -84,5 +84,14 @@ I imagine that the function needs to be able to start at the head of the first l
 
 Scrap that. What if you took list number 1 and defined the head. Then took list number two and took the head and used the insertAfter function to insert it into the first list after the head. Then the second node in that list would become the head. You could then use insertAfter on that one to tell it to insert after the one that is now the next on the second one from the head. And so on?
 
+# Bracket Validator
+
+Challenge - create a function that validates matching brackets. The function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets: {}, (), [].
+
+## Approach
+Seed the stack with a dummy node. Check if the next item in the string is the buddy to what is on the top of the stack. If it is, pop that item from the stack. If it is not, push that to the top of the stack and repeat.
+
+At the end, if there is only the dummy node on the stack, return true. If anything else is there, return false.
+
 
 

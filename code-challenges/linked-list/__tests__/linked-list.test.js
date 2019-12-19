@@ -112,6 +112,8 @@ describe('linked list tests', () => {
     expect(newList.kthFromEnd(4)).toEqual(22);
   });
 
+
+
   it('can merge two linked lists like a zipper', () => {
     const newList1 = new LinkedList(2);
     newList1.insert(3);
@@ -122,5 +124,6 @@ describe('linked list tests', () => {
     const mergedList = mergeLists(newList1, newList2);
     expect(mergedList.toString()).toEqual('1 -> 5 -> 3 -> 9 -> 2 -> 4');
   });
+
 
 });
