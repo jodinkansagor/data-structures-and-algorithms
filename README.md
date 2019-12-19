@@ -41,3 +41,29 @@ To create the insert method, I instatiated a new node, set the new node equal to
 Includes simply checks to see if a value is there and returns true if it is and false if it isnt using a while loop.
 
 For toString, I first converted the list to an array and then used the built in toString method on that array. To convert the list to an array, I again used the while loop and pushed each value into a new array.
+
+# Insertions
+
+## Challenge
+
+## Approach
+
+## Solution
+
+# Kth from end
+
+## Challenge
+Write a method that takes a number as an input. The output is the node's value that is k from the end of the list
+
+### Tests
+1. k is greater than the length of the linked list (error)
+2. k and the length are the same
+3. k is not a positive number (error)
+4. linked list the size of 1
+5. ks is not at the end but somewhere in the middle
+
+## Approach
+I think you can use this.length to figure out how long the list is and then find a node subtracting back from the total length. See white board.
+
+
+## Solution
