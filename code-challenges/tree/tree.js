@@ -1,25 +1,8 @@
 class Node {
-  constructor(value) {
+  constructor(value, left = null, right = null) {
     this.value = value;
-    this.right = null;
-    this.left = null;
-  }
-
-  addNode(value) {
-    const node = new Node(value);
-    if (node.value < this.value) {
-      if (this.left === null) {
-        this.left = node;
-      } else {
-        this.left.addNode(node);
-      }
-    } else if (node.value > this.value) {
-      if (this.right === null) {
-        this.right = node;
-      } else {
-        this.right.addNode(node);
-      }
-    }
+    this.right = right;
+    this.left = left;
   }
 }
 
@@ -28,24 +11,36 @@ class Tree {
     this.root = null;
   }
 
-  addValue(value) {
-    const node = new Node(value);
-    if (this.root === null) {
-      this.root = node;
+  add(value) {
+    const node = this.root;
+    if (node === null) {
+      this.root = new Node(value);
+      return;
     } else {
-      this.root.addNode(node);
+      const searchTheTree = function(node) {
+        if (value < node.value) {
+          if (node.left === null) {
+            node.left = new Node(value);
+            return;
+          } else if (node.left !== null) {
+            return searchTheTree(node.left);
+          }
+        } else if (value > node.value) {
+          if (node.right === null) {
+            node.right = new Node(value);
+            return;
+          } else if (node.right !== null) {
+            return searchTheTree(node.right);
+          }
+        } else {
+          return null;
+        }
+      };
+      return searchTheTree(node);
     }
   }
 }
 
-function start() {
-  const tree = new Tree();
-  tree.addValue(4);
-  tree.addValue(23);
-  tree.addValue(45);
-  tree.addValue(13);
-  console.log(tree);
-}
-start();
+
 
 module.exports = { Node, Tree };
