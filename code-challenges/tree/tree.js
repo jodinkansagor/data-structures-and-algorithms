@@ -17,28 +17,56 @@ class Tree {
       this.root = new Node(value);
       return;
     } else {
-      const searchTheTree = function(node) {
+      const addIt = function(node) {
         if (value < node.value) {
           if (node.left === null) {
             node.left = new Node(value);
             return;
           } else if (node.left !== null) {
-            return searchTheTree(node.left);
+            return addIt(node.left);
           }
         } else if (value > node.value) {
           if (node.right === null) {
             node.right = new Node(value);
             return;
           } else if (node.right !== null) {
-            return searchTheTree(node.right);
+            return addIt(node.right);
           }
         } else {
           return null;
         }
       };
-      return searchTheTree(node);
+      return addIt(node);
     }
   }
+
+  contains(value) {
+    let current = this.root;
+    while (current) {
+      if (value === current.value) {
+        return true;
+      }
+      if (value < current.value) {
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+    }
+    return false;
+  }
+
+  preOrder() {
+
+  }
+
+  inOrder() {
+
+  }
+
+  postOrder() {
+    
+  }
+
 }
 
 

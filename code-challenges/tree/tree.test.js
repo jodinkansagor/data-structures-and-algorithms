@@ -33,5 +33,13 @@ describe('binary tree', () => {
     });
   });
 
+  it('can tell if a value is in the tree', () => {
+    const tree2 = new Tree();
+    tree2.add(4);
+    tree2.add(2);
+    tree2.add(5);
+    expect(tree2.contains(2)).toBeTruthy;
+    expect(tree2.contains(17)).toBeFalsy;
+  });
 });
 
