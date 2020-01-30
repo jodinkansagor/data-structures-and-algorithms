@@ -56,18 +56,23 @@ class Tree {
   }
 
   preOrder() {
-
-  }
-
-  inOrder() {
-
-  }
-
-  postOrder() {
-    
+    if (this.root == null) {
+      return null;
+    } else {
+      const result = new Array();
+      // eslint-disable-next-line no-inner-declarations
+      function travPreOrder(node) {
+        result.push(node.value);
+        node.left && travPreOrder(node.left);
+        node.right && travPreOrder(node.right);
+      }
+      travPreOrder(this.root);
+      return result;
+    }
   }
 
 }
+
 
 
 

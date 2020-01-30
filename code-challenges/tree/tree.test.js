@@ -41,5 +41,13 @@ describe('binary tree', () => {
     expect(tree2.contains(2)).toBeTruthy;
     expect(tree2.contains(17)).toBeFalsy;
   });
+
+  it('can traverse preOrder', () => {
+    const tree = new Tree();
+    tree.add(4);
+    tree.add(2);
+    tree.add(5);
+    expect(tree.preOrder()).toEqual([4, 2, 5]);
+  });
 });
 
