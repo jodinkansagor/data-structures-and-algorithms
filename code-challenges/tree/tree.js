@@ -1,3 +1,4 @@
+/* eslint-disable no-inner-declarations */
 class Node {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -67,6 +68,21 @@ class Tree {
         node.right && travPreOrder(node.right);
       }
       travPreOrder(this.root);
+      return result;
+    }
+  }
+
+  inOrder() {
+    if(this.root === null) {
+      return null;
+    } else {
+      const result = new Array();
+      function travPostOrder(node) {
+        node.left && travPostOrder(node.left);
+        result.push(node.value);
+        node.right && travPostOrder(node.right);
+      }
+      travPostOrder(this.root);
       return result;
     }
   }
