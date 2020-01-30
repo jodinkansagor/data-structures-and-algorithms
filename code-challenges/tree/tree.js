@@ -77,10 +77,25 @@ class Tree {
       return null;
     } else {
       const result = new Array();
+      function travInOrder(node) {
+        node.left && travInOrder(node.left);
+        result.push(node.value);
+        node.right && travInOrder(node.right);
+      }
+      travInOrder(this.root);
+      return result;
+    }
+  }
+
+  postOrder() {
+    if(this.root === null) {
+      return null;
+    } else {
+      const result = new Array();
       function travPostOrder(node) {
         node.left && travPostOrder(node.left);
-        result.push(node.value);
         node.right && travPostOrder(node.right);
+        result.push(node.value);
       }
       travPostOrder(this.root);
       return result;

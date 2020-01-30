@@ -58,5 +58,13 @@ describe('binary tree', () => {
     tree.add(5);
     expect(tree.inOrder()).toEqual([2, 4, 5]);
   });
+
+  it('can traverse postOrder', () => {
+    const tree = new Tree();
+    tree.add(4);
+    tree.add(2);
+    tree.add(5);
+    expect(tree.postOrder()).toEqual([2, 5, 4]);
+  });
 });
 
