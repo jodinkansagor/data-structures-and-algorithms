@@ -68,6 +68,22 @@ I think you can use this.length to figure out how long the list is and then find
 
 ## Solution
 
+
+# Pseudoqueue
+Make a queue out of stacks.
+
+We need a couple of exceptions like if k is greater than the length or if k is a negative number. For those, we will return an error message. A for loop is used, starting at 1 (since linked lists start at 1), and looping while i doesnt equal the node we are looking for, which is the lenght - k. Then we return the value that we are looking for.
+
+# Merge
+
+## Challenge
+Write a method called mergeLists that takes 2 linked lists as input. The function needs to 'zip' to two functions together and return a reference to the head of the new list.
+
+## Approach
+I imagine that the function needs to be able to start at the head of the first list, reset the next to the head of the second list, then set the next of that to what was previously the next of the head of list 1 and then set the next of that to what was the next of the head of list 2. And so on.
+
+Scrap that. What if you took list number 1 and defined the head. Then took list number two and took the head and used the insertAfter function to insert it into the first list after the head. Then the second node in that list would become the head. You could then use insertAfter on that one to tell it to insert after the one that is now the next on the second one from the head. And so on?
+
 # Bracket Validator
 
 Challenge - create a function that validates matching brackets. The function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets: {}, (), [].

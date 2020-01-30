@@ -84,7 +84,7 @@ class LinkedList {
   kthFromEnd(k) {
     let currentNode = this.head;
     let nodeLookingFor = this.length - k;
-    // let err = new Error('This value did not work');
+
 
     if (k > this.length || k < 0) {
       return 'This value doesnt work dummy';
@@ -100,6 +100,23 @@ class LinkedList {
   }
 }
 
+const mergeLists = (list1, list2) => {
+  let list1Head = list1.head;
+  let list2Head = list2.head;
 
 
-module.exports = { Node, LinkedList };
+  while (list1Head && list2Head) {
+    let list1HeadNext = list1Head.next;
+    let list2HeadNext = list2Head.next;
+
+    if (list1Head.next) list2Head.next = list1Head.next;
+    list1Head.next = list2Head;
+
+    list1Head = list1HeadNext;
+    list2Head = list2HeadNext;
+  }
+  return list1;
+};
+
+
+module.exports = { Node, LinkedList, mergeLists };
