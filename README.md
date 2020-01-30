@@ -102,3 +102,11 @@ Additionally, this task asked us to create pre-, in-, and post- order traversals
 
 ## Ideas
 I had to draw this one out to truly understand it. Basic premise here. You have a thing you have to do at each node and you also have to go to the left, then the right. Each of the traversals put the node activity in different places. Pre, it goes first. In, it goes in the middle, post, it goes after the right.
+
+## Fizz Buzz Tree
+Make a function that takes in a binary tree and instead of pushing into an arry, manipulates the values at each node.
+
+If divisible by 3 = change to Fizz
+If divisible by 5 = change Buzz
+If divisible by 3 and 5 = change to FizzBuzz
+If neither = change number to a string

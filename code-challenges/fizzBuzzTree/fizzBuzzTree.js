@@ -3,7 +3,7 @@
 
 function fizzBuzzTree(tree) {
 
-  if (this.root == null) {
+  if (tree.root == null) {
     return null;
   } else {
     function travPreOrder(node) {
@@ -13,11 +13,11 @@ function fizzBuzzTree(tree) {
         node.value = 'Buzz';
       } else if (node.value % 3 === 0 && node.value % 5 === 0) {
         node.value = 'FizzBuzz';
-      } else node.value = 'node.value';
+      } else node.value = node.value.toString();
       node.left && travPreOrder(node.left);
       node.right && travPreOrder(node.right);
     }
-    travPreOrder(this.root);
+    travPreOrder(tree.root);
     return tree;
   }
 

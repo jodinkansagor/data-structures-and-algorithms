@@ -12,7 +12,8 @@ describe('fizzBuzzTree', () => {
     tree.add(72);
     tree.add(50);
     tree.add(17);
-    // fizzBuzzTree(tree);
-    console.log(tree.node.left);
+    const newTree = fizzBuzzTree(tree);
+    console.log(newTree);
+    expect(newTree.inOrder()).toEqual(['2', '4', 'Buzz', 'Fizz', 'Fizz', '17', 'Buzz', 'Fizz']);
   });
 });
