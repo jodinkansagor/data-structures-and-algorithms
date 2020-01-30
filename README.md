@@ -76,3 +76,13 @@ Challenge - create a function that validates matching brackets. The function sho
 Seed the stack with a dummy node. Check if the next item in the string is the buddy to what is on the top of the stack. If it is, pop that item from the stack. If it is not, push that to the top of the stack and repeat.
 
 At the end, if there is only the dummy node on the stack, return true. If anything else is there, return false.
+
+# Binary Tree
+
+## Problem - 
+Create a binary tree where the nodes have a left and a right. New nodes are added, if the node value is less than the node you are on, if goes to the left, greater than, it goes to the right. 
+
+Additionally, this task asked us to create pre-, in-, and post- order traversals.
+
+## Ideas
+I had to draw this one out to truly understand it. Basic premise here. You have a thing you have to do at each node and you also have to go to the left, then the right. Each of the traversals put the node activity in different places. Pre, it goes first. In, it goes in the middle, post, it goes after the right.
