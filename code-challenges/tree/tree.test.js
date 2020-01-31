@@ -17,7 +17,6 @@ describe('binary tree', () => {
     tree.add(4);
     tree.add(2);
     tree.add(5);
-    console.log(tree.root.left);
     expect(tree).toEqual({
       'root': {
         'left': {
@@ -64,7 +63,9 @@ describe('binary tree', () => {
     tree.add(4);
     tree.add(2);
     tree.add(5);
-    expect(tree.postOrder()).toEqual([2, 5, 4]);
+    tree.add(7);
+    tree.add(3);
+    expect(tree.postOrder()).toEqual([3, 2, 7, 5, 4]);
   });
 });
 
