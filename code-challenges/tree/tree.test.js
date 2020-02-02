@@ -1,5 +1,6 @@
 const { Tree } = require('./tree.js');
 
+
 describe('binary tree', () => {
   it('instatiates an empty tree', () => {
     const tree = new Tree();
@@ -67,5 +68,28 @@ describe('binary tree', () => {
     tree.add(3);
     expect(tree.postOrder()).toEqual([3, 2, 7, 5, 4]);
   });
+
+  // it('can traverse the tree breadth first', () => {
+  //   const tree = new Tree();
+  //   tree.add(5);
+  //   tree.add(2);
+  //   tree.add(7);
+  //   tree.add(15);
+  //   tree.add(17);
+  //   tree.add(20);
+  //   expect(tree.breadthfirst()).toEqual([10, 5, 15, 2, 7, 17, 20]);
+  // });
+
+  it('can find the max value in a tree', () => {
+    const tree = new Tree();
+    tree.add(5);
+    tree.add(2);
+    tree.add(7);
+    tree.add(15);
+    tree.add(17);
+    tree.add(20);
+    expect(tree.findMaxValue()).toEqual(20);
+    expect(tree.findMaxValue()).not.toEqual(2);
+  })
 });
 
