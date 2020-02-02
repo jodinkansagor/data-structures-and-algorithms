@@ -89,6 +89,7 @@ describe('binary tree', () => {
     tree.add(17);
     tree.add(20);
     expect(tree.findMaxValue()).toEqual(20);
+    expect(tree.findMaxValue()).not.toEqual(2);
   })
 });
 
