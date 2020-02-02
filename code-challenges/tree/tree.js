@@ -37,7 +37,7 @@ class Stack {
 class PseudoQueue {
   constructor() {
     this.stackOne = new Stack(),
-    this.stackTwo = new Stack();
+      this.stackTwo = new Stack();
   }
 
   enqueue(value) {
@@ -142,7 +142,7 @@ class Tree {
   }
 
   inOrder() {
-    if(this.root === null) {
+    if (this.root === null) {
       return null;
     } else {
       const result = new Array();
@@ -157,7 +157,7 @@ class Tree {
   }
 
   postOrder() {
-    if(this.root === null) {
+    if (this.root === null) {
       return null;
     } else {
       const result = new Array();
@@ -171,8 +171,26 @@ class Tree {
     }
   }
 
+  findMaxValue() {
+    if (this.root === null) {
+      return null;
+    } else {
+      let maxValue = 0;
+      function findMaxValue(node) {
+        if (node.value > maxValue) {
+          maxValue = node.value;
+        }
+        node.left && findMaxValue(node.left);
+        node.right && findMaxValue(node.right);
+      }
+      findMaxValue(this.root);
+      return maxValue;
+    }
+  }
+
+
   breadthfirst() {
-    
+
     if (this.root === null) {
       return null;
     }

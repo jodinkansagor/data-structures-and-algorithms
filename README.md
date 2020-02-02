@@ -110,3 +110,12 @@ If divisible by 3 = change to Fizz
 If divisible by 5 = change Buzz
 If divisible by 3 and 5 = change to FizzBuzz
 If neither = change number to a string
+
+## Breadth First Tree
+
+## Find Max Value
+Problem - take in a tree and return the highest value in the tree.
+
+Ideas - it seems to me that one could use the traversal functions and ask at each node if the value of the node is higher than the value you already have stored in a maxvalue variable. If yes, reassign max value to that value. If not, keep going.
+
+Seems to work...
