@@ -36,7 +36,7 @@ class Stack {
 class PseudoQueue {
   constructor() {
     this.stackOne = new Stack(),
-      this.stackTwo = new Stack();
+    this.stackTwo = new Stack();
   }
 
   enqueue(value) {
